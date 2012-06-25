@@ -6,8 +6,7 @@ class JalaliConvertorWizard(osv.osv_memory):
     _inherit = 'ir.wizard.screen'
 
     _columns = {
-        'ir_module_module_id': fields.many2one('ir.module.module',
-                                               'IR Module Module'),
+        'ir_model_id': fields.many2one('ir.model', 'IR Model'),
         'state': fields.selection([('init', 'init'), ('done', 'done')],
                                   'state', readonly=True),
     }
