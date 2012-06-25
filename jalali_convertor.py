@@ -15,6 +15,6 @@ class JalaliConvertorWizard(osv.osv_memory):
 
     def do_convert(self, cr, uid, ids, context=None):
         print "durud"
-        pass
+        return self.write(cr, uid, ids, {'state': 'done'}, context=context)
 
 JalaliConvertorWizard()
