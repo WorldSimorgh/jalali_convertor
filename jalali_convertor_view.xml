@@ -1,0 +1,36 @@
+<openerp>
+	<data>
+		<record id="jalali_convertor_wizard" model="ir.ui.view">
+			<field name="name">Jalali Convertor Wizard</field>
+			<field name="model">jalali.convertor.wizard</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<field name="state" invisible="True" />
+				<group states="init">
+					<group colspan="4">
+						<field name="ir_module_module_id" required="True" />
+					</group>
+					<group colspan="4">
+						<button special="cancel" string="Cancel" icon="gtk-cancel" />
+						<button name="do_convert" string="Compelete" type="object" icon="gtk-ok" />
+					</group>
+				</group>
+				<group states="done">
+					<button special="cancel" string="Close" icon="gtk-ok" />
+				</group>
+			</field>
+		</record>
+
+		<record id="jalali_convertor_wizard_form_action" model="ir.actions.act_window">
+			<field name="name">Jalali Convertor Wizard</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">jalali.convertor.wizard</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">form</field>
+			<field name="target">new</field>
+		</record>
+
+		<menuitem id="jalali_convertor_main_menu" name="Jalali Convertor"
+			parent="base.menu_administration" action="jalali_convertor_wizard_form_action" />
+	</data>
+</openerp>

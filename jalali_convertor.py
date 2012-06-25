@@ -1,8 +1,8 @@
 from osv import osv, fields
 
 
-class JalaliConvertor(osv.osv_memory):
-    _name = 'jalali.convertor'
+class JalaliConvertorWizard(osv.osv_memory):
+    _name = 'jalali.convertor.wizard'
     _inherit = 'ir.wizard.screen'
 
     _columns = {
@@ -18,4 +18,4 @@ class JalaliConvertor(osv.osv_memory):
         print "durud"
         pass
 
-JalaliConvertor()
+JalaliConvertorWizard()
